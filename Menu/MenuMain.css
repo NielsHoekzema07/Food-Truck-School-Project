@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: turquoise;
+  --secondary-color: orange;
+  --mob-fontp: 20px;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color) !important;
+  color: white;
+  background-image: url(../Img/IMG_RptlyGhJ7yJ4-Photoroom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Typ hier code voor main: */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  background-image: url(../Img/cartoon-wooden-surface-600nw-252762637.png);
+  width: 100vw;
+  height: 900px;
+  background-size: cover;
+  border: orange 5px solid;
+  border-radius: 50px;
+}
+
+.innerImg {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 95%;
+  align-items: center;
+  gap: 10px;
+}
+.imgDiv1 {
+  background-image: url(../Img/gallery/7166616329_6792b4a07a_z.jpg);
+}
+.imgDiv2 {
+  background-image: url(../Img/gallery/Thai-street-food-1-of-11.jpg);
+}
+.imgDiv3 {
+  background-image: url(../Img/gallery/springroll1.png);
+}
+.imgDiv4 {
+  background-image: url(../Img/gallery/Look_Chin_Ping.webp);
+}
+.imgDiv5 {
+  background-image: url(../Img/gallery/hat-yai-fried-chicken-blog-edited.jpg);
+}
+.imgDiv6 {
+  background-image: url(../Img/gallery/bangkok-street-food-guide-2.jpg);
+}
+
+.innerImg #imgDiv {
+  width: 40vw;
+  height: 200px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  transition: transform 1000ms;
+  color: var(--primary-color);
+  box-shadow: 0 0px 50px rgb(0, 0, 0);
+}
+
+.innerImg #imgDiv:hover {
+  transform: scale(1.06);
+  transition: transform 1000ms;
+}
+
+#imgDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  position: relative;
+}
+
+#imgDiv h3 {
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 1px black, 1px 0 black, 0 -1px black !important;
+}
+
+#imgDiv .addBtn {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+#imgDiv span {
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px 11px;
+  padding-top: 1px;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: black 1px solid;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+#imgDiv a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#imgDiv p {
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+}
+
+.background .cartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartBtn a {
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  padding: 5px 44px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+}
+
+@media (min-width: 1024px) {
+  .innerImg #imgDiv {
+    height: 250px;
+  }
+
+  .background {
+    max-width: 1600px;
+    width: 90vw;
+    height: 1100px;
+  }
+}

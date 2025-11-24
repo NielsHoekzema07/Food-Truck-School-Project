@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css -->
+    <link rel="stylesheet" href="../HeaderFooter.css" />
+    <link rel="stylesheet" href="Cart.css" />
+    <!-- javascript -->
+    <script src="../SlideToggleMenu.js"></script>
+    <script src="Cart.js"></script>
+  </head>
+
+  <body>
+    <header class="mb-5">
+      <nav>
+        <div class="logo">
+          <a href="../HoofdPagina/Hoofd.html"
+            ><img src="../Img/logo/Untitled.png" alt="Logo"
+          /></a>
+        </div>
+
+        <a id="menu-btn"> ☰ </a>
+      </nav>
+      <div id="menu">
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="../Menu/MenuMain.html">Menu</a></li>
+          <li><a href="../CartPagina/Cart.html">Winkel wagen</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="background">
+        <form method="post" class="innerImg">
+          <div class="item" productnaam="ThaiShrimp">
+            <div class="imgDiv1" id="imgDiv">
+              <h3>Thai Shirmp</h3>
+              <p>12.50,-</p>
+            </div>
+            <div class="aantal">
+              <label for="aantal">Aantal:</label>
+              <input
+                type="number"
+                id="0"
+                class="aantal"
+                name="aantal"
+                min="1"
+                max="100"
+                required
+                value="0"
+              />
+              <div class="PrijsItem">
+                <p class="prijs">€00,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item" productnaam="ThaiSpiesjes">
+            <div class="imgDiv2" id="imgDiv">
+              <h3>5 Thai Spiesjes</h3>
+              <p>11.50,-</p>
+            </div>
+            <div class="aantal">
+              <label for="aantal">Aantal:</label>
+              <input
+                type="number"
+                id="1"
+                class="aantal"
+                name="aantal"
+                min="1"
+                max="100"
+                required
+                num
+                value="0"
+              />
+              <div class="PrijsItem">
+                <p class="prijs">€00,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item" productnaam="Springrolls">
+            <div class="imgDiv3" id="imgDiv">
+              <h3>5 Springrolls</h3>
+              <p>11,-</p>
+            </div>
+            <div class="aantal">
+              <label for="aantal">Aantal:</label>
+              <input
+                type="number"
+                id="2"
+                class="aantal"
+                name="aantal"
+                min="1"
+                max="100"
+                required
+                value="0"
+              />
+              <div class="PrijsItem">
+                <p class="prijs">€00,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item" productnaam="ChinPing">
+            <div class="imgDiv4" id="imgDiv">
+              <h3>3 Chin Ping</h3>
+              <p>13,-</p>
+            </div>
+            <div class="aantal">
+              <label for="aantal">Aantal:</label>
+              <input
+                type="number"
+                id="3"
+                class="aantal"
+                name="aantal"
+                min="1"
+                max="100"
+                required
+                value="0"
+              />
+              <div class="PrijsItem">
+                <p class="prijs">€00,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item" productnaam="BbqChicken">
+            <div class="imgDiv5" id="imgDiv">
+              <h3>4 BBQ chicken</h3>
+              <p>15,-</p>
+            </div>
+            <div class="aantal">
+              <label for="aantal">Aantal:</label>
+              <input
+                type="number"
+                id="4"
+                class="aantal"
+                name="aantal"
+                min="1"
+                max="100"
+                required
+                value="0"
+              />
+              <div class="PrijsItem">
+                <p class="prijs">€00,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item" productnaam="CheeseCups">
+            <div class="imgDiv6" id="imgDiv">
+              <h3>10 Cheese Cups</h3>
+              <p>10,-</p>
+            </div>
+            <div class="aantal">
+              <label for="aantal">Aantal:</label>
+              <input
+                type="number"
+                id="5"
+                class="aantal"
+                name="aantal"
+                min="1"
+                max="100"
+                required
+                value="0"
+              />
+              <div class="PrijsItem">
+                <p class="prijs">€00,00</p>
+              </div>
+            </div>
+          </div>
+          <div class="totaalPrijs">
+            <h4>Totaal Prijs: <span class="eindPrijs"></span></h4>
+          </div>
+          <div class="row verstuur formselect">
+            <button
+              onclick="window.location.href='../Betselpagina/BestelPagina.html'"
+              type="button"
+              class="btn btn-primary mb-3 col verstuurBtn"
+            >
+              Verstuur
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer mt-5 py-4">
+      <div class="innerFooter row align-items-center">
+        <!-- Logo + Naam -->
+        <div class="col-md-4 text-center text-md-start">
+          <div class="logo">
+            <img
+              src="../Img/logo/Untitled.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+          </div>
+        </div>
+
+        <!-- Locatie -->
+        <div class="col-md-4 text-center">
+          <h5>Locatie</h5>
+          <p>Locatie gaat hier</p>
+        </div>
+
+        <!-- Contactinformatie-->
+        <div class="col-md-4 text-center text-md-end" id="contact">
+          <h5>Contact</h5>
+          <p>Email: info@foodtruck.nl</p>
+          <p>Telefoon: +31 6 12345678</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

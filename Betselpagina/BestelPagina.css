@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: turquoise;
+  --secondary-color: orange;
+  --mob-fontp: 20px;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color) !important;
+  background-image: url(../Img/IMG_RptlyGhJ7yJ4-Photoroom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.formselect {
+  display: flex;
+  justify-content: center;
+  width: calc(90vw);
+  flex-direction: column;
+}
+
+.tijd {
+  margin-top: 3vh;
+  display: flex;
+
+  select {
+    width: 89vw;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 3vh;
+  }
+}
+
+.verstuur {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  width: 89vw;
+
+  button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.Betaald {
+  display: flex;
+
+  select {
+    width: 89vw;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 3vh;
+  }
+}
+
+.textveld:focus {
+  border-color: var(--clrBackground);
+  box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+}
+
+footer {
+  background-color: rgb(65, 218, 202);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.innerFooter {
+  width: 98vw;
+}
+
+.footer-logo {
+  width: 120px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #f8b400;
+}
+
+.social-icon:hover {
+  color: #f8b400;
+}
+
+@media (min-width: 1024px) {
+  #menu-btn {
+    display: none;
+  }
+
+  #menu {
+    display: flex;
+    max-height: none;
+  }
+
+  li {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../HeaderFooter.css">
+    <link rel="stylesheet" href="../Menu/MenuMain.css" />
+    <!-- Javascript -->
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+    <script src="../SlideToggleMenu.js"></script>
+    <script src="MenuSessionStorage.js"></script>
+    <!-- Overig -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="../JS/Order.js"></script>
+  </head>
+  <body>
+    <header class="mb-5">
+      <nav>
+        <div class="logo">
+          <a href="../HoofdPagina/Hoofd.html"
+            ><img src="../Img/logo/Untitled.png" alt="Logo"
+          /></a>
+        </div>
+        <a id="menu-btn"> ☰ </a>
+      </nav>
+      <div id="menu">
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="../Menu/MenuMain.html">Menu</a></li>
+          <li><a href="../CartPagina/Cart.html">Winkel wagen</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="background">
+        <div class="innerImg">
+          <div class="imgDiv1" id="imgDiv" productNaam="ThaiShrimp">
+            <h3>Thai Shrimp</h3>
+            <p>12.50,-</p>
+            <a class="addBtn" id="0"><span>+</span></a>
+            <p>Allergieën vrij</p>
+          </div>
+          <div class="imgDiv2" id="imgDiv" productNaam="ThaiSpiesjes">
+            <h3>5 Thai Spiesjes</h3>
+            <p>11.50,-</p>
+            <a class="addBtn" id="1"><span>+</span></a>
+            <p>Kan vegatarisch en is allergieën vrij</p>
+          </div>
+          <div class="imgDiv3" id="imgDiv" productNaam="Springrolls">
+            <h3>5 Springrolls</h3>
+            <p>11,-</p>
+            <a class="addBtn" id="2"><span>+</span></a>
+            <p>Kan vegatarisch en is allergieën vrij</p>
+          </div>
+          <div class="imgDiv4" id="imgDiv" productNaam="ChinPing">
+            <h3>3 Chin Ping</h3>
+            <p>13,-</p>
+            <a class="addBtn" id="3"><span>+</span></a>
+            <p>allergieën vrij</p>
+          </div>
+          <div class="imgDiv5" id="imgDiv" productNaam="BbqChicken">
+            <h3>4 BBQ chicken</h3>
+            <p>15,-</p>
+            <a class="addBtn" id="4" ><span>+</span></a>
+            <p>allergieën vrij</p>
+          </div>
+          <div class="imgDiv6" id="imgDiv" productNaam="CheeseCups">
+            <h3>10 Cheese Cups</h3>
+            <p>10,-</p>
+            <a class="addBtn" id="5"><span>+</span></a>
+            <p>Kan vegatarisch en bevat lactose.</p>
+          </div>
+        </div>
+        <div class="cartBtn">
+          <a href="../CartPagina/Cart.html"
+            ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-5 py-4">
+      <div class="innerFooter row align-items-center">
+        <!-- Logo + Naam -->
+        <div class="col-md-4 text-center text-md-start">
+          <div class="logo">
+            <img
+              src="../Img/logo/Untitled.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+          </div>
+        </div>
+
+        <!-- Locatie -->
+        <div class="col-md-4 text-center">
+          <h5>Locatie</h5>
+          <p>Hele mooie locatie</p>
+        </div>
+
+        <!-- Contactinformatie-->
+        <div class="col-md-4 text-center text-md-end" id="contact">
+          <h5>Contact</h5>
+          <p>Email: info@foodtruck.nl</p>
+          <p>Telefoon: +31 6 12345678</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    $(document).ready(() => {
+      // Initialiseer winkelwagenknop met aantal items
+      updateCartButtonCount();
+      
+      function updateCartButtonCount() {
+        const cart = JSON.parse(sessionStorage.getItem("cart")) || { items: [] };
+        const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
+        if (itemCount > 0) {
+          $(".cartBtn").append(`<span class="cart-count">${itemCount}</span>`);
+        }
+      }
+    });
+  </script>
+</html>

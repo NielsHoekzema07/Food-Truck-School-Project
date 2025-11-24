@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestelgegevens</title>
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+    <script src="OrderDetails.js"></script>
+    <link rel="stylesheet" href="Order.css">
+</head>
+<body>
+    <h1>Bestelgegevens</h1>
+
+    <div class="orderContainer">
+        <div class="orderDetails"></div>
+            <p><strong>Bestelnummer:</strong> <span id="orderId">[Bestelnummer]</span></p>
+            <p><strong>Betaald:</strong> <span id="isPaid">[Ja/Nee]</span></p>
+            <p><strong>Aangeschafte items:</strong></p>
+            <ul id="itemsPurchased">
+                <!-- Lijst van items wordt hier dynamisch toegevoegd -->
+            </ul>
+            <p><strong>Totaalprijs:</strong> <span id="totalPrice">[Totaalprijs]</span></p>
+        </div>
+    </div>
+    <div class="orderReadyTime">
+        <h2>Bestelling Klaar Op:</h2>
+        <p><span id="readyTime">[Tijd]</span></p>
+    </div>
+    <div class="userInputContainer">
+        <h2>Uw gegevens</h2>
+        <p><strong>Voornaam:</strong> <span id="firstName">[Voornaam]</span></p>
+        <p><strong>Achternaam:</strong> <span id="lastName">[Achternaam]</span></p>
+        <p><strong>Telefoonnummer:</strong> <span id="phoneNumber">[Telefoonnummer]</span></p>
+        <p><strong>Email:</strong> <span id="email">[Email]</span></p>
+        <p><strong>Beschrijving:</strong> <span id="description">[Beschrijving]</span></p>
+    </div>
+</body>
+</html>

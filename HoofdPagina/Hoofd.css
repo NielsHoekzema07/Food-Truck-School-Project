@@ -1,0 +1,170 @@
+:root {
+  --primary-color: turquoise;
+  --secondary-color: orange;
+  --mob-fontp: 20px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
+  background-color: var(--primary-color) !important;
+  color: white;
+  background-image: url(../Img/IMG_RptlyGhJ7yJ4-Photoroom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.galleryItem {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery img {
+  display: block;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+
+.galleryTitle h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--secondary-color);
+  font-size: 40px;
+  font-weight: bolder;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Bungee Spice", sans-serif;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.galleryText {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color);
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.galleryText p {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.mainText {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+}
+
+.mainText ul {
+  list-style: none;
+}
+
+.mainImg1 {
+  overflow: hidden;
+  border-radius: 50px;
+  margin: 20px 5vw;
+}
+
+.mainImg1 img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+@media (max-width: 1024px) {
+  .mainImg2 {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+    height: 600px;
+  }
+
+  .section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+    height: 600px;
+  }
+
+  .mainText {
+    height: 100%;
+    width: 100%;
+    margin: 25px;
+  }
+
+  .mainImg1 {
+    height: 100%;
+    width: 100%;
+    margin: 25px;
+  }
+
+  .mainImg1 img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .mainImg2 {
+    height: 100%;
+    width: 75%;
+    overflow: hidden;
+    margin: 25px;
+  }
+
+  .mainImg2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+}
